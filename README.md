@@ -42,4 +42,8 @@ Rather then listening for the string of "iFrame" you may want to change this. To
 
 All you need to do is change the "if" statement check to the String you require. You can also do a check on the "direction" as well to ensure the String is coming from either the Agent or the Customer as an option.
 
+If you would prefer the "trigger" to not be based on the conversation transcript you can also use the SDK to subscribe to the customAttributes on the interaction. This way if a key changes you could make this the trigger. I have put an example on this below:
+
+    Genesys("subscribe", "Database.updated", function(){});
+
 Other examples can be embedding a Google Maps based on an address request or any other 3rd party view you would like to show.
